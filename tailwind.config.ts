@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Rubik', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Sova brand colors
+				purple: {
+					50: '#f3f0ff',
+					100: '#e9e5ff',
+					500: '#6366f1',
+					600: '#5856eb',
+					700: '#4f46e5',
+				},
+				pink: {
+					500: '#ec4899',
+					600: '#db2777',
+				},
+				emerald: {
+					500: '#10b981',
+					600: '#059669',
+				},
+				amber: {
+					500: '#f59e0b',
+					600: '#d97706',
+				},
+			},
+			backgroundImage: {
+				'gradient-primary': 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
+				'gradient-secondary': 'linear-gradient(135deg, #10b981 0%, #f59e0b 100%)',
+				'gradient-hero': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +112,26 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				slideUp: {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				},
+				scaleIn: {
+					'0%': { transform: 'scale(0.9)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.5s ease-in-out',
+				'slide-up': 'slideUp 0.5s ease-out',
+				'scale-in': 'scaleIn 0.3s ease-out',
 			}
 		}
 	},
